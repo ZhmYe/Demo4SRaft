@@ -1,0 +1,201 @@
+.sidebar {
+    position: absolute;
+    left: 0px;
+    width: 80px;
+    border: 3px solid black;
+    border-top-left-radius:1em;
+    border-top-right-radius:1em;
+    border-bottom-left-radius:1em;
+    border-bottom-right-radius:1em;
+    text-align: center;
+    overflow: hidden;
+    white-space:nowrap;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1000;
+}
+
+.sidebar:hover{
+    width: 200px;
+}
+.sidebar:hover .head-photo{
+    width: 25%;
+}
+.sidebar:hover span{
+    font-size: large;
+}
+.head-photo {
+    width: 50%;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+}
+.line-split {
+    width: 50%;
+    height: 1px;
+    border-top: solid gray 1px;
+    margin: 0;
+}
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+ 
+.sidebar li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.sidebar span {
+    font-size: 0;
+    transition: font-size 1s;
+}
+ 
+/* 鼠标移动到选项上修改背景颜色 */
+.sidebar li a:hover {
+    background-color: #DCDCDC;
+    color: black;
+    border: 0px solid;
+    border-top-left-radius:1em;
+    border-top-right-radius:1em;
+    border-bottom-left-radius:1em;
+    border-bottom-right-radius:1em;
+}
+.mynav ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#333;
+    height: 50px;
+  }
+.mynav span{
+    display:inline-block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none; 
+}
+.mynav h4{
+    float: left;
+    position: relative;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+}
+.mynav img{
+    float: left;
+}
+.mynav li{
+    float:right;
+    display: inline;
+  }
+.mynav .my-dropdown {
+    float: right;
+}
+  
+.mynav li a, .dropbtn
+  {
+    display:inline-block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+  }
+  
+.mynav li a:hover, .mynav .my-dropdown:hover, .mynav span:hover
+  {
+    background-color:#111;
+  }
+  
+.mynav .my-dropdown
+  {
+    display:none;
+  }
+  
+.mynav .my-dropdown-content
+  {
+    display:none;
+    position:absolute;
+    background-color:#f9f9f9;
+    font-size: 2px;
+    box-shadow:0px 8px 4px 0px rgba(0,0,0,0.2);
+  }
+  
+.mynav .my-dropdown-content a
+  {
+    color:black;
+    padding:12px 4px;
+    text-decoration:none;
+    display:inline-block;
+  }
+  
+.mynav .my-dropdown-content a:hover {background-color: #f1f1f1}
+  
+.mynav .my-dropdown:hover .my-dropdown-content
+  {
+    display:block;
+  }
+
+@media screen and (max-width: 768px){
+    .mynav .my-dropdown{
+        display: inline;
+    }
+    .mynav li{
+        display: none;
+    }
+}
+
+
+.perspective {
+  margin-top: 100px;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+.book-wrap {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  transform: rotateX(30deg);
+  transform-style: preserve-3d;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: left;
+  border: 1px solid #1976D2;
+}
+.book-content {
+  background-color: #fff;
+  color: #33363C;
+}
+.book-cover {
+  background-color: #1976D2;
+  color: #ffffff;
+  animation: roll 6s ease 0s 2 alternate;
+}
+.book-content1{
+  animation: roll 3s ease 3s 2 alternate;
+}
+.book-content2 {
+  animation: roll 4s ease 2s 2 alternate;
+}
+.book-content3 {
+  animation: roll 5s ease 1s 2 alternate;
+}
